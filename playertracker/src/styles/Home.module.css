@@ -1,0 +1,65 @@
+.container{
+  border: 1px solid #fdfdfd83;
+  border-radius: 10px;
+  height: 100vh;  
+  width: auto;
+  margin: 20px;
+
+}
+
+.subContainer{
+  min-width: fit-content;
+  margin-top: 10px;
+}
+
+.subContainer ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  list-style: none;  /* Removes bullet points */
+  gap: 20px;  /* Space between columns */
+}
+
+.containerLeft ul, .containerCenter ul, .containerRight ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  overflow-x: auto;
+
+}
+
+.containerLeft {
+  min-width: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  height: 100%;  /* Take up all available height */
+  min-height: 100%;  /* Ensure minimum height is full container */
+  text-align: center;
+  color: #FFF;
+  position: relative;
+
+
+}
+
+
+
+.containerCenter {
+  min-width: fit-content;
+  border: 1px solid pink;
+  border-radius: 5px;
+  height: 100%;
+  width: 50vw;
+}
+
+.containerRight {
+  min-width: fit-content;
+  border: 1px solid pink;
+  border-radius: 5px;
+  height: 100%;
+  width: 20vw;
+}
+
+

@@ -1,0 +1,71 @@
+.recentPerformanceBlock ul{
+    display: flex;
+    flex-direction: row;
+     width: 100%;
+     padding: 25px;
+
+  }
+  
+  .recentPerformanceBlock{
+    width: 350px;
+    border-radius: 20px;
+    border: 5px solid #5A7699;
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    height: 170px;
+    margin: 10px;
+  }
+  
+  .performanceBlockDetail{
+    font-size: 13px;
+    position: relative;
+    right: 35%;
+    bottom: 15px;
+    text-align: left;
+    margin-left: 25px;
+  }
+
+.performanceBlockDetail p {
+    margin-bottom: 3px;
+}
+  
+  .performanceBlockRating{
+    border-radius: 10px;
+    background-color: green;
+    width: 130px;
+    height: 75px;
+    border: 1px solid #FFF;
+    position: relative;
+    margin-right: 20px;
+
+
+    
+  
+  }
+
+  /* recentPerformanceStats */
+
+.recentPerformanceStatsBlock {
+    border-radius: 10px;
+    border: 5px solid #5A7699;
+    color: pink;
+    justify-content: center;
+  }
+  
+  .rating{
+    font-size: 30px;
+    position: relative;
+    font-weight: 700;
+    top: 20px;
+  }
+
+ 
+  
+  .moreBtn{
+    font-size: 13px;
+    width: 100px;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 3px;
+    border: 3px solid #5A7699;
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+  }
