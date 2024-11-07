@@ -8,7 +8,7 @@
     position: relative;
     top: 0;
     left: 0;
-    /* width: 100%; */
+
     padding: 20px 10%;
     background: rgb(34,139,34);
     background:#303F52;
@@ -25,6 +25,12 @@
     color: #FFF;
     font-weight: 700;
     background-color: transparent;
+}
+
+.navbar a{
+    display: flex;
+    margin-top: 5px;
+    flex-direction: row;
 }
 
 .navbar, .navbar a:any-link{
@@ -53,23 +59,10 @@
 }
 
 .navbar a:hover::before{
-    width: 100%;
+    width: 50%;
 }
 
 
-.status ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.status ul li{
-    margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-}
 
 .navBtn,.Links{
     display: none;
@@ -77,6 +70,21 @@
 
 .imgNav{
     background-color: transparent;
+}
+
+
+.addEvent, .addTraining{
+    border-radius: 8px;
+    background-color: green;
+    width: 200px;
+    padding: 4px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+}
+
+.addTraining{
+    background-color: red;
 }
 @media only screen and (max-width: 1220px) {
 

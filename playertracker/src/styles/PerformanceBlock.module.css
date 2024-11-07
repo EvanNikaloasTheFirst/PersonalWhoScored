@@ -18,8 +18,8 @@
   .performanceBlockDetail{
     font-size: 13px;
     position: relative;
-    right: 35%;
-    bottom: 15px;
+    right: 25%;
+    bottom: 10px;
     text-align: left;
     margin-left: 25px;
   }
@@ -35,7 +35,7 @@
     height: 75px;
     border: 1px solid #FFF;
     position: relative;
-    margin-right: 20px;
+    right: 30px;
 
 
     
@@ -61,6 +61,8 @@
  
   
   .moreBtn{
+    position: relative;
+    top: 10px;
     font-size: 13px;
     width: 100px;
     color: #FFF;
@@ -69,3 +71,5 @@
     border: 3px solid #5A7699;
     background: linear-gradient(180deg, #303F52 0%, #000 100%);
   }
+
+

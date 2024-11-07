@@ -31,6 +31,7 @@
 
 }
 
+
 .containerLeft {
   min-width: fit-content;
   width: fit-content;
@@ -40,8 +41,12 @@
   text-align: center;
   color: #FFF;
   position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
 
-
+.containerLeft ul{
+    overflow-x: auto;
 }
 
 
@@ -63,3 +68,36 @@
 }
 
 
+
+
+
+@media only screen and (max-width: 1000px) {
+
+.container{
+  height: fit-content;
+}
+.subContainer ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  list-style: none;  /* Removes bullet points */
+  gap: 20px;  /* Space between columns */
+}
+
+
+
+
+
+}
+
+
+
+
+.addEventPane{
+  width: 800px;
+  height: 500px;
+  background-color: red;
+  border-radius: 10px;
+}

@@ -1,7 +1,20 @@
 import styles from "@/styles/PerformanceBlock.module.css";
 
 
-export default function PerformanceBlock(){
+export default function PerformanceBlock({opponent, competition, minutesPlayed, conditionAfter, matchRating}){
+
+
+  function defineMatchRatingColour (matchRating) {
+    if (matchRating > 0 &&  matchRating <= 5){
+      return {backgroundColor: "#ff0000"}
+    }else if (matchRating > 5 &&  matchRating <= 6.5){
+      return {backgroundColor: "#ffa500"}
+    }else{
+      return {backgroundColor: "#008000"}
+    }
+
+  }
+
 
 
 
@@ -12,17 +25,19 @@ export default function PerformanceBlock(){
           <li>
           <div className={styles.performanceBlockDetail}>
 
-          <p>Opponent: Raynes Park</p>
-          <p>Cometition: League </p>
-          <p>Minutes: 90 Minutes</p>
-          <p>Condition: Good</p>
+          <p>Opponent: {opponent}</p>
+          <p>Cometition: {competition} </p>
+          <p>Minutes: {minutesPlayed} Minutes</p>
+          <p>Condition: {conditionAfter}</p>
           <button className={styles.moreBtn}>More</button>
         </div>
           </li>
 
           <li>
-          <div className={styles.performanceBlockRating}>
-          <p className={styles.rating}>8.2</p>
+
+            {/* // import manual colour change */}
+          <div className={styles.performanceBlockRating} >
+          <p className={styles.rating}>{matchRating}</p>
         </div>
       
           </li>

@@ -5,17 +5,12 @@ import styles from "@/styles/Home.module.css";
 import PerformanceBlock from "../../components/PerformanceBlock";
 import Navbar from "../../components/Navbar";
 import SeasonStats from "../../components/SeasonStats";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
+import matchForm from "@/styles/addEvent.module.css"
+
+const attributes = ["1 V 1 Defending", "Ariel Duels", "Communication", "Ariel Duels",
+  "Goal(s)", "Assist(s)", "1 V 1 Attacking", "Progressive passing", "Add+"
+]
 export default function Home() {
   return (
     <>
@@ -38,7 +33,27 @@ export default function Home() {
                 <div className={styles.containerLeft}>
                   <h2>Recent Performances</h2>
                   <ul>
-                    <li><PerformanceBlock/></li>
+                    <li><PerformanceBlock 
+                    opponent={"Raynes Park Vale"}
+                    matchRating={9.0}
+                    competition={"League"}
+                    minutesPlayed={90}
+                    conditionAfter={"Good"}/>
+                    </li>
+                    <li><PerformanceBlock 
+                    opponent={"Raynes Park Vale"}
+                    matchRating={9.0}
+                    competition={"League"}
+                    minutesPlayed={90}
+                    conditionAfter={"Good"}/>
+                    </li>
+                    <li><PerformanceBlock 
+                    opponent={"Raynes Park Vale"}
+                    matchRating={9.0}
+                    competition={"League"}
+                    minutesPlayed={90}
+                    conditionAfter={"Good"}/>
+                    </li>
 
                   </ul>
                 </div>  
@@ -50,12 +65,56 @@ export default function Home() {
                 </li>
               <li>
               <SeasonStats/>
+
+
+
              
               </li>
             </ul>
           </div>
 
+          <div className={matchForm.addEventPane}>
+            <h2>Match Review</h2>
+            <form className={matchForm.addMatchBox}>
+              <label className={matchForm.labels}>Opponent:</label>
+              <input type="input" name = "opponent" className={matchForm.opponentBox}/>
 
+              <div className={matchForm.minsAndConditionBox}>
+                <div>
+                <label className={matchForm.labels}>Minutes Played:</label>
+                <input type="input" name="minutesPlayed" />
+                </div>
+              <div>
+
+              <label className={matchForm.labels}>Condition:</label>
+              <input type="input" name="condition"/>
+            </div>
+          </div>
+
+          <label className={matchForm.labels}>How did you perfom?</label>
+          <textarea className={matchForm.matchDescription}/>
+
+
+<div className={matchForm.attributeContainer}>
+      <label className={matchForm.labels}>Select 4 areas you 
+        excelled in during the game</label>
+<ul className={matchForm.attributeList}>
+{(attributes).map((item, index) => (
+<li key={index} onClick={() => showTicketWindowPane(item)}>
+          <div className={matchForm.attributeBlock}>
+            <p>{item}</p>
+          </div>
+           </li>
+       ))}
+   </ul>
+</div>
+
+
+   
+            </form>
+
+
+          </div>
         </div>
       </div>
     </>

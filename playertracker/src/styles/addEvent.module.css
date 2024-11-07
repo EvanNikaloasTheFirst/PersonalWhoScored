@@ -1,0 +1,93 @@
+.addEventPane{
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    border-radius: 10px;
+    border: 5px solid #5A7699;
+    width: 800px;
+    height: 600px;
+    color: #FFF;
+    margin: 0 auto;
+    text-align: center;
+}
+.addEventPane h2{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.addMatchBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 15px;
+}
+
+.labels{
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+.opponentBox{
+    width: 60%;
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    border: 2px solid #FFF;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+
+.minsAndConditionBox{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.minsAndConditionBox div{
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    border: 2px solid #FFF;
+    border-radius: 8px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.matchDescription{
+    width:400px;
+    height: 200px;
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    border: 2px solid #FFF;
+    border-radius: 8px;
+    margin: 0 auto;
+    resize: none;
+}
+
+.attributeContainer{
+    width: 300px;
+    margin-top: 50px;
+    margin: 0 auto;
+    display: flexbox;
+    flex-wrap: wrap;
+
+}
+.attributeBlock{
+    width: fit-content;
+    height: 60px;
+    background: linear-gradient(180deg, #303F52 0%, #000 100%);
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    padding: 5px;
+}
+
+.attributeBlock p {
+    margin-top: 10px;
+}
+
+.attributeList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}

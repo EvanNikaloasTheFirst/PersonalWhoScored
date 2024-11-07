@@ -16,10 +16,9 @@ export default function Navbar() {
         <header className={styles.header}>
             <a href='/' className={styles.logo}>BugTrack</a>
             <nav className={styles.navbar}>
-                <a href='/'>Dashboard</a>
-                <a href='/allproject'>Projects</a>
-                <a href='/createproject'>Create a project!</a>
-                <a href='/settings'>Settings</a>
+                
+            <a href='/'><div className={styles.addEvent}>Add Match Review</div></a>
+            <a href='/'><div className={styles.addTraining}>Add Training Session</div></a>
             </nav>
 
             <button className={styles.navBtn} onClick={toggleMenu}>
