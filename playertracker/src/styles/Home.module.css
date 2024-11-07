@@ -7,6 +7,8 @@
 
 }
 
+
+
 .subContainer{
   min-width: fit-content;
   margin-top: 10px;
@@ -100,4 +102,24 @@
   height: 500px;
   background-color: red;
   border-radius: 10px;
+}
+
+
+.addEvent, .addTraining{
+  border-radius: 8px;
+  background-color: green;
+  width: fit-content;
+  padding: 4px;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.addTraining{
+  background-color: red;
 }

@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import styles from "@/styles/Navbar.module.css";
 import { useRouter } from 'next/router';
-
 export default function Navbar() {
     const router = useRouter();
     const [toogleNav, setToggleNav] = useState(false);
+   
+
 
     function toggleMenu() {
         setToggleNav(prevState => !prevState);
     }
 
+
+   
     
 
     return (
@@ -17,8 +20,7 @@ export default function Navbar() {
             <a href='/' className={styles.logo}>BugTrack</a>
             <nav className={styles.navbar}>
                 
-            <a href='/'><div className={styles.addEvent}>Add Match Review</div></a>
-            <a href='/'><div className={styles.addTraining}>Add Training Session</div></a>
+           
             </nav>
 
             <button className={styles.navBtn} onClick={toggleMenu}>
@@ -32,6 +34,8 @@ export default function Navbar() {
                 <a href='/createproject'>Create a project!</a>
                 <a href='/settings'>Settings</a>
             </div>
+           
+
         </header>
     );
 }

@@ -1,17 +1,36 @@
 import Head from "next/head";
-import Image from "next/image";
-import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+import addEventStyles from "@/styles/addEvent.module.css";
 import PerformanceBlock from "../../components/PerformanceBlock";
 import Navbar from "../../components/Navbar";
 import SeasonStats from "../../components/SeasonStats";
-
-import matchForm from "@/styles/addEvent.module.css"
+import { useState } from 'react';
+import CreateMatchPane from '../../components/CreateMatchPane';
 
 const attributes = ["1 V 1 Defending", "Ariel Duels", "Communication", "Ariel Duels",
   "Goal(s)", "Assist(s)", "1 V 1 Attacking", "Progressive passing", "Add+"
 ]
+
+
+
 export default function Home() {
+
+  const [createMatchPane, setShowCreateMatchPane] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
+  
+  function showMatchPane(){
+    setShowCreateMatchPane(true);
+    setIsBlurred(true);
+
+  }
+
+  const blurredBackground = {
+    filter: 'blur(2px)'
+  };
+  
+
+
+  
   return (
     <>
       <Head>
@@ -23,11 +42,16 @@ export default function Home() {
       <div>
       <Navbar/>
 
-        <div className={styles.container}>
+        <div className={styles.container} >
+        <div className={styles.addEvent} onClick={showMatchPane}><p>Add Match Review</p></div>
+         {createMatchPane && <CreateMatchPane 
+         onClose={() => {
+          setShowCreateMatchPane(false);
+          setIsBlurred(false);
+         }}
+        />}
 
-        
-
-          <div className={styles.subContainer}>
+          <div className={styles.subContainer} style={isBlurred ? blurredBackground : {}}>
             <ul>
               <li>
                 <div className={styles.containerLeft}>
@@ -68,53 +92,14 @@ export default function Home() {
 
 
 
+
+
              
               </li>
             </ul>
           </div>
 
-          <div className={matchForm.addEventPane}>
-            <h2>Match Review</h2>
-            <form className={matchForm.addMatchBox}>
-              <label className={matchForm.labels}>Opponent:</label>
-              <input type="input" name = "opponent" className={matchForm.opponentBox}/>
-
-              <div className={matchForm.minsAndConditionBox}>
-                <div>
-                <label className={matchForm.labels}>Minutes Played:</label>
-                <input type="input" name="minutesPlayed" />
-                </div>
-              <div>
-
-              <label className={matchForm.labels}>Condition:</label>
-              <input type="input" name="condition"/>
-            </div>
-          </div>
-
-          <label className={matchForm.labels}>How did you perfom?</label>
-          <textarea className={matchForm.matchDescription}/>
-
-
-<div className={matchForm.attributeContainer}>
-      <label className={matchForm.labels}>Select 4 areas you 
-        excelled in during the game</label>
-<ul className={matchForm.attributeList}>
-{(attributes).map((item, index) => (
-<li key={index} onClick={() => showTicketWindowPane(item)}>
-          <div className={matchForm.attributeBlock}>
-            <p>{item}</p>
-          </div>
-           </li>
-       ))}
-   </ul>
-</div>
-
-
-   
-            </form>
-
-
-          </div>
+         
         </div>
       </div>
     </>

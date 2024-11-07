@@ -1,12 +1,16 @@
-.addEventPane{
+.addEventPane {
     background: linear-gradient(180deg, #303F52 0%, #000 100%);
     border-radius: 10px;
     border: 5px solid #5A7699;
     width: 800px;
-    height: 600px;
+    height: 900px;
     color: #FFF;
-    margin: 0 auto;
     text-align: center;
+    position: fixed;  /* Changed from absolute to fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Center the element */
+    z-index: 1000;  /* Ensure it appears above other content */
 }
 .addEventPane h2{
     margin-bottom: 20px;
@@ -36,6 +40,7 @@
     height: 30px;
     padding: 10px;
     margin-bottom: 20px;
+    color: #FFF;
 
 }
 
@@ -53,6 +58,7 @@
     margin-right: 5px;
     display: flex;
     flex-direction: column;
+    color: #FFF;
 }
 
 .matchDescription{
@@ -63,31 +69,65 @@
     border-radius: 8px;
     margin: 0 auto;
     resize: none;
+    color: #FFF;
+    word-wrap:break-word;
 }
 
-.attributeContainer{
+.attributeContainer {
+    position: relative;
     width: 300px;
-    margin-top: 50px;
+    top: 50px;
     margin: 0 auto;
-    display: flexbox;
-    flex-wrap: wrap;
-
 }
-.attributeBlock{
-    width: fit-content;
-    height: 60px;
+
+
+.attributeList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 10px; /* Space between items */
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.attributeBlock {
+    height: 40px;
+    width: 100px;
     background: linear-gradient(180deg, #303F52 0%, #000 100%);
     border-radius: 10px;
     border: 1px solid #FFF;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .attributeBlock p {
-    margin-top: 10px;
+    margin: 0;
+    font-size: 12px;
 }
 
-.attributeList{
+
+.submitButton,.closeButton{
+    position: relative;
+    width: 200px;
+    height: 30px;
+    top: 90px;
+    background-color: #5A7699;
+    border-radius: 7px;
+    border: 1px solid #FFF;
+    margin: 0 auto;
+}
+
+.closeButton{
+background-color: red;
+}
+
+.submitContainer{
     display: flex;
     flex-direction: row;
-    list-style: none;
+    justify-content: center;
+    margin-top: 20px;
 }
