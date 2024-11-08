@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import addEventStyles from "@/styles/addEvent.module.css";
+
 import PerformanceBlock from "../../components/PerformanceBlock";
 import Navbar from "../../components/Navbar";
 import SeasonStats from "../../components/SeasonStats";

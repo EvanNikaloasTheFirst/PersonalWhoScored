@@ -13,7 +13,7 @@ export default function CreateMatchPane({onClose}){
   
 
 
-  const [fourPositiveAttributes, setFourPositiveAttributes] = useState([]);
+  // const [fourPositiveAttributes, setFourPositiveAttributes] = useState([]);
   function onSubmit(ticketForm){
     if(formData.opponent === "" || formData.minutesPlayed === "" || formData.condition === ""){
       alert("Please fill in all fields")

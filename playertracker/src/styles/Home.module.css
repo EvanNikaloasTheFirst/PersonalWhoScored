@@ -55,7 +55,7 @@
 
 .containerCenter {
   min-width: fit-content;
-  border: 1px solid pink;
+  border: 1px solid #303F52;
   border-radius: 5px;
   height: 100%;
   width: 50vw;
@@ -73,26 +73,6 @@
 
 
 
-@media only screen and (max-width: 1000px) {
-
-.container{
-  height: fit-content;
-}
-.subContainer ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  list-style: none;  /* Removes bullet points */
-  gap: 20px;  /* Space between columns */
-}
-
-
-
-
-
-}
 
 
 
@@ -122,4 +102,24 @@
 
 .addTraining{
   background-color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+
+.container{
+  height: fit-content;
+}
+.subContainer ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  list-style: none;  /* Removes bullet points */
+  gap: 20px;  /* Space between columns */
+}
+
+
+
+
 }

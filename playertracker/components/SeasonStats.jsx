@@ -5,7 +5,7 @@ export default function SeasonStats(){
 
     return(
         <div className={styles.recentPerformanceStats}>
-        <h2>Season Stats hiiiii</h2>
+        <h2>Season Stats</h2>
           <ul>
             <li>
             <div className={styles.recentPerformanceStatsBlock}>
