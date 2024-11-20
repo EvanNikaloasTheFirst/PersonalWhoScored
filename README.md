@@ -27,3 +27,9 @@ A personal tool built with Next.js to track and analyze my football performances
 - Simply clone the repo
 - Run on localhost
 (Or wait till i've hosted it online...)
+
+
+
+## Currently in build
+![Path4Ballers](https://github.com/user-attachments/assets/b971258e-50a4-4da1-9862-3dbe360c5dd4)
+
